@@ -1,6 +1,6 @@
 import AnnouncementBar, { Navbar } from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import { GlanceSection, StatsSection, StagesSection } from "@/components/MiddleSections";
+import { StatsSection, StagesSection } from "@/components/MiddleSections";
 import {
   EditionsSection,
   GallerySection,
@@ -21,17 +21,14 @@ export default function Home() {
       {/* 3. Hero Section with Kinetic Parallax & 3D Tilt Card */}
       <HeroSection />
 
-      {/* 4. Event at a Glance */}
-      <GlanceSection />
+      {/* 4. Evolution Across 6 Flagship Editions (Heritage of Excellence) */}
+      <EditionsSection />
 
-      {/* 5. Scale of WCC (Count-Up Numbers) */}
-      <StatsSection />
-
-      {/* 6. Contest Architecture (Four-Stage Evaluation Pipeline) */}
+      {/* 5. Contest Architecture (Four-Stage Evaluation Pipeline) */}
       <StagesSection />
 
-      {/* 7. Evolution Across 6 Flagship Editions (Interactive Tab Switcher) */}
-      <EditionsSection />
+      {/* 6. Scale of WCC (National Reach & Legacy) */}
+      <StatsSection />
 
       {/* 8. Previous Editions Photo Archive (Carousel) */}
       <GallerySection />

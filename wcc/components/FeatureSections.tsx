@@ -8,7 +8,7 @@ export function EditionsSection() {
   const data = EDITIONS_DATA[selectedEdition];
 
   return (
-    <section className="py-20 bg-[#FBF9F8] border-t border-slate-200/80 relative" id="history">
+    <section className="py-20 bg-[#FBF9F8] border-t border-slate-200/80 relative" id="excellence">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <span className="text-xs font-bold text-[#FF6D4D] uppercase tracking-widest">
@@ -193,7 +193,7 @@ export function GallerySection() {
 
 export function PrizesSection() {
   return (
-    <section className="py-20 bg-[#FBF9F8] border-t border-slate-200/80">
+    <section className="py-20 bg-[#FBF9F8] border-t border-slate-200/80" id="prizes">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-xs font-bold text-[#FF6D4D] uppercase tracking-widest">

@@ -5,8 +5,8 @@ import Image from "next/image";
 
 export default function AnnouncementBar() {
   return (
-    <div className="anim-bar-in w-full bg-gradient-to-r from-[#FF6039] via-[#FF6D4D] to-[#EA580C] text-white px-4 py-2 text-xs sm:text-sm font-medium tracking-wide shadow-sm relative z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-4 flex-wrap text-center">
+    <div className="">
+      {/* <div className="max-w-7xl mx-auto flex items-center justify-center gap-2 sm:gap-4 flex-wrap text-center">
         <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-white/20 backdrop-blur-sm border border-white/25">
           OFFICIAL WCC 6.0
         </span>
@@ -27,7 +27,7 @@ export default function AnnouncementBar() {
             />
           </svg>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 }
@@ -42,7 +42,7 @@ export function Navbar() {
       const scrollPos = window.scrollY;
       setScrolled(scrollPos > 60);
 
-      const sectionIds = ["overview", "glance", "format", "history", "gallery", "sponsors", "faqs"];
+      const sectionIds = ["overview", "excellence", "format", "sponsors", "faqs"];
       let current = "";
       for (const id of sectionIds) {
         const el = document.getElementById(id);
@@ -64,11 +64,9 @@ export function Navbar() {
 
   const navLinks = [
     { name: "Overview", href: "#overview", id: "overview" },
-    { name: "At a Glance", href: "#glance", id: "glance" },
-    { name: "Contest Journey", href: "#format", id: "format" },
-    { name: "6 Editions", href: "#history", id: "history" },
-    { name: "Archive", href: "#gallery", id: "gallery" },
-    { name: "Partners", href: "#sponsors", id: "sponsors" },
+    { name: "Excellence", href: "#excellence", id: "excellence" },
+    { name: "About Contest", href: "#format", id: "format" },
+    { name: "Sponsors", href: "#sponsors", id: "sponsors" },
     { name: "FAQs", href: "#faqs", id: "faqs" },
   ];
 
@@ -103,11 +101,11 @@ export function Navbar() {
               <span className="font-display font-extrabold text-[#0F172A] tracking-tight text-base sm:text-lg">
                 ACM VNRVJIET
               </span>
-              <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-sky-50 text-[#006398] border border-sky-200/80">
+              {/* <span className="text-[10px] font-bold tracking-wider uppercase px-2 py-0.5 rounded bg-sky-50 text-[#006398] border border-sky-200/80">
                 Autonomous
-              </span>
+              </span> */}
             </div>
-            <p className="text-[11px] text-slate-500 font-medium tracking-tight">Estd. 1988</p>
+            {/* <p className="text-[11px] text-slate-500 font-medium tracking-tight">Estd. 1988</p> */}
           </div>
         </a>
 
@@ -129,10 +127,10 @@ export function Navbar() {
 
         {/* Far Right Action Cluster */}
         <div className="flex items-center gap-3">
-          <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+          {/* <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
             Round 1 Free Pass
-          </span>
+          </span> */}
 
           <a
             href="https://unstop.com"

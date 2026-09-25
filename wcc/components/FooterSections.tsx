@@ -75,7 +75,7 @@ export function ClosingRegistration() {
           READY TO COMPETE AT THE <span className="text-[#FF6D4D]">NATIONAL LEVEL?</span>
         </h2>
         <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto mb-8 text-balance">
-          Join over 6,000 algorithmic coders in Winter Coding Contest 6.0. Round 1 is 100% Free. Test your skill against the finest minds across India.
+          Join over 6,000 <span className="text-[#FF6D4D] font-bold">+ </span>algorithmic coders in Winter Coding Contest 6.0. Round 1 is 100% Free. Test your skill against the finest minds across India.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-xs font-semibold text-slate-700 mb-9">
@@ -142,11 +142,6 @@ export function Footer() {
               <li>
                 <a href="#overview" className="hover:text-white transition-colors">
                   Contest Overview
-                </a>
-              </li>
-              <li>
-                <a href="#glance" className="hover:text-white transition-colors">
-                  Event at a Glance
                 </a>
               </li>
               <li>

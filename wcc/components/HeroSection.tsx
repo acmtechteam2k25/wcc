@@ -80,7 +80,7 @@ export default function HeroSection() {
 
   return (
     <section
-      id="hero-section"
+      id="overview"
       ref={heroRef}
       className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden glow-radial-orange"
     >
@@ -140,16 +140,16 @@ export default function HeroSection() {
 
             {/* Standout Editorial Status Badges */}
             <div className="anim-badges flex flex-wrap items-center gap-2.5 mb-7">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 border border-orange-200 text-[#AD3218] text-xs font-bold uppercase tracking-wider">
+              {/* <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 border border-orange-200 text-[#AD3218] text-xs font-bold uppercase tracking-wider">
                 <span className="w-2 h-2 rounded-full bg-[#FF6D4D] animate-ping" />
                 Registration Open • Locks Sept 24, 2026
-              </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 border border-sky-200 text-[#006398] text-xs font-semibold">
+              </div> */}
+              {/* <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 border border-sky-200 text-[#006398] text-xs font-semibold">
                 <svg className="w-3.5 h-3.5 text-[#006398]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
                 Hybrid Arena: Round 1 Online (Oct 09) → Round 2 Campus (Oct 11)
-              </div>
+              </div> */}
             </div>
 
             {/* 3 Editorial Highlight Pods */}
@@ -250,7 +250,7 @@ export default function HeroSection() {
             </div>
 
             {/* Micro Credentials */}
-            <div className="mt-7 flex items-center gap-3 sm:gap-5 text-xs text-slate-400 flex-wrap">
+            {/* <div className="mt-7 flex items-center gap-3 sm:gap-5 text-xs text-slate-400 flex-wrap">
               <span>
                 Powered by <strong className="text-slate-600 font-semibold">HackerRank Arena</strong>
               </span>
@@ -262,7 +262,7 @@ export default function HeroSection() {
               <span>
                 Grand Finale at <strong className="text-slate-600 font-semibold">Hyderabad Campus</strong>
               </span>
-            </div>
+            </div> */}
           </div>
 
           {/* Right Column (5 Cols) - 3D Perspective Poster Canvas */}
