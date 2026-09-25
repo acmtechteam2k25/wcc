@@ -120,19 +120,38 @@ export const FAQ_ITEMS = [
 
 export const GALLERY_SLIDES = [
   {
-    title: "National Winners Felicitation & On-Stage Honors",
-    tag: "WCC 5.0 Grand Finale",
-    desc: "Distinguished faculty, HOD Information Technology, and industry leaders awarding certificates and prizes to national top coders.",
-    location: "Archival Record • KS Auditorium",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuARG1v3sO1ErE1idjJM9ugt4WSEjSZB15WoPj2k_m7d088iiFaIJl4GU45IW_QAEeJOHZSX-a_wiiXIsgKlt_ML7Ewd6JxfrazuiOJxbd4PAOYjgZfPRZ7Fy_ESq_CH3qB1rOSLOU1kESo1Gq98R3T3ZCKIpOHHHV5yTJT6_T20P3kRzOFF7EXajlShBdF3RUn81JrysxuY-IOU7Gjhc0eqZSMTE8c_8x0Er6ARWYXvKKQBtWPW7xRIyrC-if_KeMRaeA4",
+    title: "National Coding Arena & Finalists Battle",
+    tag: "WCC Campus Arena",
+    desc: "Shortlisted algorithmic minds tackling high-intensity dynamic programming and graph problems at VNRVJIET.",
+    location: "VNRVJIET Computing Labs",
+    image: "/assets/cover3.jpg",
   },
   {
-    title: "In-Person Finalist Coding Arena & Core Committee",
-    tag: "WCC 4.0 & 3.0 Arena",
-    desc: "Shortlisted teams across premier Indian engineering colleges tackling dynamic algorithms in Hyderabad.",
-    location: "VNRVJIET High Performance Computing",
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCaMzDOTiUQ7t48ZyIEqLFd_16WW-eMOHpnNVoXMAoAM-O1IN8E0n3rDL-RpUpNpcUaIRyLhQaXmULZQ694DyhVcufBmG4o1RsJC11GoipYtkbK3hnbKDtHt9IsJXCrSM5JxISglBzqrqhxN6F9AyVOnug6WrqVYHag01zig9Wy6YC45MkJVHruN4RLSqAeLa45hGY_DJHHJaHUSLrYKw_CgaIHPqxuOGRmkiW7vVx5HRXUL-3tQdbWBXqME_EXD-qvBFQ",
+    title: "On-Stage Felicitation & Trophy Presentation",
+    tag: "Grand Valedictory",
+    desc: "Honoring national top rankers, champions, and outstanding coding teams with trophies and merit awards.",
+    location: "KS Auditorium • Campus Stage",
+    image: "/assets/gall5.jpg",
+  },
+  {
+    title: "National Contestants & Team Collaboration",
+    tag: "Flagship Edition Moments",
+    desc: "Student coders formulating strategies and submitting optimized solutions under live proctored conditions.",
+    location: "Archival Record • Hyderabad",
+    image: "/assets/gall10.jpg",
+  },
+  {
+    title: "Mentorship, Faculty Guidance & Organizing Pride",
+    tag: "ACM VNRVJIET Heritage",
+    desc: "Distinguished department leaders, mentors, and the student organizing committee orchestrating the arena.",
+    location: "Institutional Archive",
+    image: "/assets/pic2.jpg",
+  },
+  {
+    title: "Celebrating Algorithmic Mastery & Legacy",
+    tag: "Winter Coding Contest Archive",
+    desc: "A tradition of competitive programming excellence uniting collegiate talent nationwide.",
+    location: "WCC Official Archive",
+    image: "/assets/wcc3_car.webp",
   },
 ];
