@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { GALLERY_SLIDES } from "@/lib/contest-data";
 
+import Image from "next/image";
+
 export function GallerySection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -10,15 +12,22 @@ export function GallerySection() {
     setCurrentSlide((curr) => (curr === 0 ? GALLERY_SLIDES.length - 1 : curr - 1));
   };
 
-  const nextSlide = () => {
+  const nextSlide = React.useCallback(() => {
     setCurrentSlide((curr) => (curr === GALLERY_SLIDES.length - 1 ? 0 : curr + 1));
-  };
+  }, []);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      nextSlide();
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
 
   return (
     <section className="py-20 bg-white border-t border-slate-200/80" id="gallery">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
-          <div>
+          <div className="reveal-on-scroll">
             <span className="text-xs font-bold text-[#FF6D4D] uppercase tracking-widest">
               Archival Moments
             </span>
@@ -31,7 +40,7 @@ export function GallerySection() {
           </div>
 
           {/* Carousel Controller Arrows */}
-          <div className="flex items-center gap-2 mt-4 sm:mt-0">
+          <div className="flex items-center gap-2 mt-4 sm:mt-0 reveal-on-scroll" style={{ transitionDelay: '0.1s' }}>
             <button
               onClick={prevSlide}
               aria-label="Previous Slide"
@@ -54,7 +63,7 @@ export function GallerySection() {
         </div>
 
         {/* Real Photo Carousel */}
-        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 shadow-xl">
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-slate-900 shadow-xl reveal-on-scroll" style={{ transitionDelay: '0.2s' }}>
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -62,13 +71,14 @@ export function GallerySection() {
             {GALLERY_SLIDES.map((slide, idx) => (
               <div key={idx} className="min-w-full relative">
                 <div className="aspect-[16/9] md:aspect-[21/9] w-full overflow-hidden relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
+                  <Image
                     src={slide.image}
                     alt={slide.title}
-                    className="w-full h-full object-cover object-center opacity-95 hover:scale-105 transition-transform duration-700"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
+                    className="object-cover object-center opacity-95 hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent pointer-events-none" />
                 </div>
                 <div className="absolute bottom-6 left-6 right-6 sm:bottom-10 sm:left-10 sm:right-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
                   <div>

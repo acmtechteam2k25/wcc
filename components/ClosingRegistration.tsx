@@ -8,7 +8,7 @@ export function ClosingRegistration() {
       className="py-20 bg-gradient-to-b from-[#FFFDFC] to-orange-50/60 border-t border-slate-200/80 relative"
       id="register"
     >
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-on-scroll">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-100 text-[#FF6D4D] text-xs font-bold uppercase tracking-wider mb-6">
           PORTAL LOCKS SEPTEMBER 24, 2026
         </div>
@@ -34,10 +34,10 @@ export function ClosingRegistration() {
             href="https://unstop.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 rounded-xl font-display font-bold text-base text-white bg-gradient-to-r from-[#FF6039] to-[#FF6D4D] hover:from-[#FF6D4D] hover:to-[#EA580C] shadow-glow-coral hover:shadow-xl transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-4 rounded-xl font-display font-bold text-base text-white bg-gradient-to-r from-[#FF6039] to-[#FF6D4D] hover:from-[#FF6D4D] hover:to-[#EA580C] shadow-glow-coral hover:shadow-glow-coral-lg active:scale-[0.98] active:translate-y-0.5 hover:-translate-y-1 transition-all duration-200 group"
           >
             <span>REGISTER ON UNSTOP PLATFORM</span>
-            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </a>

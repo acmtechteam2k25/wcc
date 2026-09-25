@@ -10,7 +10,7 @@ export function EditionsSection() {
   return (
     <section className="py-20 bg-[#FBF9F8] border-t border-slate-200/80 relative" id="excellence">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-10">
+        <div className="text-center max-w-2xl mx-auto mb-10 reveal-on-scroll">
           <span className="text-xs font-bold text-[#FF6D4D] uppercase tracking-widest">
             Heritage of Excellence
           </span>
@@ -44,8 +44,8 @@ export function EditionsSection() {
         </div>
 
         {/* Edition Content Display Pod */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-12 shadow-subtle-card transition-all">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div className="bg-white rounded-3xl border border-slate-200/90 p-8 sm:p-12 shadow-subtle-card overflow-hidden">
+          <div key={selectedEdition} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center" style={{ animation: "heroFadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) both" }}>
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/70 text-[#FF6D4D] text-xs font-bold uppercase tracking-wider mb-4">
                 {data.badge}

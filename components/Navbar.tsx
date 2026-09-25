@@ -32,7 +32,7 @@ export default function AnnouncementBar() {
   );
 }
 
-export function Navbar() {
+export function Navbar({ introComplete = true }: { introComplete?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -73,7 +73,9 @@ export function Navbar() {
   return (
     <header
       id="main-header"
-      className={`anim-nav-in sticky top-0 z-40 bg-[#FFFDFC]/95 backdrop-blur-md border-b transition-all duration-300 ${
+      className={`${
+        introComplete ? "anim-nav-in" : "opacity-0 pointer-events-none"
+      } sticky top-0 z-40 bg-[#FFFDFC]/95 backdrop-blur-md border-b transition-all duration-300 ${
         scrolled ? "shadow-sm border-slate-200" : "border-slate-200/80"
       }`}
     >
@@ -84,16 +86,17 @@ export function Navbar() {
         }`}
       >
         {/* Left: ACM VNRVJIET Diamond Logo Seal */}
-        <a href="#" className="flex items-center gap-3.5 group">
+        <a href="https://vnrvjiet.acm.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3.5 group">
           <div
             id="brand-logo-wrap"
             className="w-11 h-11 shrink-0 flex items-center justify-center transition-transform duration-200 group-hover:scale-105"
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVsFV5jmI4DYgste6wBbS0ajAbzE2NNqLdaeL0_LGkPW3YTuYbgfjMRYtFgmv-aXbseIseeb-apNmLmN6qMlh_EKi7V4UqoGxjJCggaRADc1hYGgXTr4JRuIXgM2AY3KIo3qxE7JHRccq3MMxAhFQ7UN4FSR7AExqDdIb8d89oqTBs9Z1honiDHe-pu1vrPmece8UltBLlCoLPbyekVN-nhekSkKNaozcwZJxB0du2Q5U7QowEExa0t5txinv3B0T8JWA"
+            <Image
+              src="/acm-vnrvjiet-logo.png"
               alt="ACM VNRVJIET Official Seal"
-              className="w-11 h-11 object-contain drop-shadow-sm"
+              width={44}
+              height={44}
+              className="object-contain drop-shadow-sm"
             />
           </div>
           <div className="flex flex-col">

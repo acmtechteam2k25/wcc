@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from "react";
 
-export default function HeroSection() {
+export default function HeroSection({ introComplete = true }: { introComplete?: boolean }) {
   const heroRef = useRef<HTMLDivElement>(null);
   const posterContainerRef = useRef<HTMLDivElement>(null);
   const tiltCardRef = useRef<HTMLDivElement>(null);
@@ -93,7 +93,7 @@ export default function HeroSection() {
           {/* Left Column (7 Cols) - Kinetic Display */}
           <div className="lg:col-span-7 flex flex-col items-start text-left hero-kinetic-title">
             {/* Eyebrow Pill */}
-            <div className="anim-pill-in inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs sm:text-sm text-slate-700 mb-5">
+            <div className={`${introComplete ? "anim-pill-in" : "opacity-0"} inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-slate-200 shadow-sm text-xs sm:text-sm text-slate-700 mb-5`}>
               <span className="w-2 h-2 rounded-full bg-[#FF6D4D]" />
               <span className="font-medium">ACM VNRVJIET&nbsp;</span>
               <span className="text-[#FF6D4D] font-bold">| presents</span>
@@ -101,61 +101,29 @@ export default function HeroSection() {
 
             {/* Massive Display Headline with Kinetic Typography Depth */}
             <h1 className="font-display font-extrabold text-4xl sm:text-6xl xl:text-7xl tracking-tight text-[#0F172A] uppercase leading-[1.04] mb-4 select-none">
-              <span className="kinetic-word kinetic-word-winter anim-word-1 block">WINTER</span>
-              <span className="kinetic-word kinetic-word-coding anim-word-2 block">CODING</span>
-              <span className="relative inline-block text-[#FF6D4D] group cursor-default">
-                <span className="kinetic-word kinetic-word-contest anim-word-3">CONTEST</span>
-                <span className="kinetic-word kinetic-word-edition anim-word-4 inline-block ml-2 relative">
+              <span className={`kinetic-word kinetic-word-winter ${introComplete ? "anim-word-1" : "opacity-0"} block`}>WINTER</span>
+              <span className={`kinetic-word kinetic-word-coding ${introComplete ? "anim-word-2" : "opacity-0"} block`}>CODING</span>
+              <span className="relative inline-block text-[#FF6D4D] cursor-default">
+                <span className={`kinetic-word kinetic-word-contest ${introComplete ? "anim-word-3" : "opacity-0"}`}>CONTEST</span>
+                <span className={`kinetic-word kinetic-word-edition ${introComplete ? "anim-word-4" : "opacity-0"} inline-block ml-2 relative`}>
                   6.0
-                  {/* Tooltip Discovery for 6.0 */}
-                  <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 px-2.5 py-1 bg-slate-900/95 text-white text-[10px] font-sans font-semibold rounded-lg shadow-lg tracking-normal whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:-top-11 transition-all duration-200 backdrop-blur-sm border border-white/10 z-30">
-                    Sixth Flagship Edition • Oct 2026
-                  </span>
                 </span>
-                <svg
-                  className="absolute -top-3 -right-10 w-12 h-12 text-[#FF6D4D] hidden sm:block pointer-events-none transform transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110"
-                  fill="none"
-                  viewBox="0 0 60 60"
-                >
-                  <path
-                    d="M8 42 C 24 10, 48 8, 48 24 C 48 42, 20 44, 30 18"
-                    stroke="currentColor"
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M30 18 L22 23 M30 18 L27 28"
-                    stroke="currentColor"
-                    strokeWidth="3.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
               </span>
             </h1>
 
             {/* Tagline Subtitle */}
-            <p className="anim-tagline text-lg sm:text-2xl text-slate-600 font-normal tracking-normal mb-7">
+            <p className={`${introComplete ? "anim-tagline" : "opacity-0"} text-lg sm:text-2xl text-slate-600 font-normal tracking-normal mb-7`}>
               Code, Compile and Compete at <span className="font-bold text-[#0F172A]">National Level</span>.
             </p>
 
             {/* Standout Editorial Status Badges */}
-            <div className="anim-badges flex flex-wrap items-center gap-2.5 mb-7">
-              {/* <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-orange-50 border border-orange-200 text-[#AD3218] text-xs font-bold uppercase tracking-wider">
-                <span className="w-2 h-2 rounded-full bg-[#FF6D4D] animate-ping" />
-                Registration Open • Locks Sept 24, 2026
-              </div> */}
-              {/* <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-50 border border-sky-200 text-[#006398] text-xs font-semibold">
-                <svg className="w-3.5 h-3.5 text-[#006398]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                Hybrid Arena: Round 1 Online (Oct 09) → Round 2 Campus (Oct 11)
-              </div> */}
+            <div className={`${introComplete ? "anim-badges" : "opacity-0"} flex flex-wrap items-center gap-2.5 mb-7`}>
             </div>
 
             {/* 3 Editorial Highlight Pods */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-xl mb-8">
               {/* Pod 1 */}
-              <div className="anim-pod-1 p-3.5 rounded-2xl bg-white border border-orange-200/90 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default">
+              <div className={`${introComplete ? "anim-pod-1" : "opacity-0"} p-3.5 rounded-2xl bg-white border border-orange-200/90 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default`}>
                 <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#FF6D4D] flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -175,7 +143,7 @@ export default function HeroSection() {
               </div>
 
               {/* Pod 2 */}
-              <div className="anim-pod-2 p-3.5 rounded-2xl bg-white border border-slate-200 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default">
+              <div className={`${introComplete ? "anim-pod-2" : "opacity-0"} p-3.5 rounded-2xl bg-white border border-slate-200 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default`}>
                 <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#006398] flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -193,7 +161,7 @@ export default function HeroSection() {
               </div>
 
               {/* Pod 3 */}
-              <div className="anim-pod-3 p-3.5 rounded-2xl bg-white border border-emerald-200 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default">
+              <div className={`${introComplete ? "anim-pod-3" : "opacity-0"} p-3.5 rounded-2xl bg-white border border-emerald-200 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default`}>
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -212,7 +180,7 @@ export default function HeroSection() {
             </div>
 
             {/* Action Buttons */}
-            <div className="anim-cta flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+            <div className={`${introComplete ? "anim-cta" : "opacity-0"} flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto`}>
               <a
                 href="https://unstop.com"
                 target="_blank"
@@ -248,33 +216,18 @@ export default function HeroSection() {
                 <span>Explore Architecture & Schedule</span>
               </a>
             </div>
-
-            {/* Micro Credentials */}
-            {/* <div className="mt-7 flex items-center gap-3 sm:gap-5 text-xs text-slate-400 flex-wrap">
-              <span>
-                Powered by <strong className="text-slate-600 font-semibold">HackerRank Arena</strong>
-              </span>
-              <span className="inline-block w-1 h-1 rounded-full bg-slate-300" />
-              <span>
-                Hosted on <strong className="text-slate-600 font-semibold">Unstop</strong>
-              </span>
-              <span className="inline-block w-1 h-1 rounded-full bg-slate-300" />
-              <span>
-                Grand Finale at <strong className="text-slate-600 font-semibold">Hyderabad Campus</strong>
-              </span>
-            </div> */}
           </div>
 
           {/* Right Column (5 Cols) - 3D Perspective Poster Canvas */}
           <div
             id="poster-container"
             ref={posterContainerRef}
-            className="lg:col-span-5 flex justify-center poster-perspective-wrapper anim-poster"
+            className={`lg:col-span-5 flex justify-center poster-perspective-wrapper ${introComplete ? "anim-poster" : "opacity-0"}`}
           >
             <div
               id="tilt-card"
               ref={tiltCardRef}
-              className="relative max-w-sm w-full poster-tilt-card poster-float-anim"
+              className="relative max-w-[420px] sm:max-w-[460px] w-full poster-tilt-card poster-float-anim"
               style={{ transform: "rotateX(0deg) rotateY(0deg) scale(1)" }}
             >
               <div
@@ -286,15 +239,6 @@ export default function HeroSection() {
                 ref={posterFrameRef}
                 className="relative rounded-2xl bg-white p-3 border border-slate-200/90 shadow-2xl overflow-hidden transition-shadow duration-300"
               >
-                <div className="absolute top-5 left-5 right-5 z-20 flex items-center justify-between pointer-events-none">
-                  <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wider bg-[#0F172A]/90 backdrop-blur-md text-white uppercase shadow-sm">
-                    EDITION 6.0
-                  </span>
-                  <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold tracking-wider bg-emerald-600/95 backdrop-blur-md text-white uppercase shadow-sm">
-                    100% FREE ROUND 1
-                  </span>
-                </div>
-
                 {/* EXACT AUTHENTIC POSTER ARTIFACT */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
