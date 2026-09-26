@@ -124,16 +124,7 @@ export default function HeroSection({ introComplete = true }: { introComplete?: 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-xl mb-8">
               {/* Pod 1 */}
               <div className={`${introComplete ? "anim-pod-1" : "opacity-0"} p-3.5 rounded-2xl bg-white border border-orange-200/90 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default`}>
-                <div className="w-10 h-10 rounded-xl bg-orange-50 text-[#FF6D4D] flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
+                
                 <div>
                   <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Prize Pool</p>
                   <p className="font-display font-bold text-[#0F172A] text-base">
@@ -144,16 +135,7 @@ export default function HeroSection({ introComplete = true }: { introComplete?: 
 
               {/* Pod 2 */}
               <div className={`${introComplete ? "anim-pod-2" : "opacity-0"} p-3.5 rounded-2xl bg-white border border-slate-200 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default`}>
-                <div className="w-10 h-10 rounded-xl bg-sky-50 text-[#006398] flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                    />
-                  </svg>
-                </div>
+                
                 <div>
                   <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Team Size</p>
                   <p className="font-display font-bold text-[#0F172A] text-base">1 – 2 Members</p>
@@ -162,16 +144,7 @@ export default function HeroSection({ introComplete = true }: { introComplete?: 
 
               {/* Pod 3 */}
               <div className={`${introComplete ? "anim-pod-3" : "opacity-0"} p-3.5 rounded-2xl bg-white border border-emerald-200 shadow-subtle-card flex items-center gap-3 transition-transform duration-200 hover:-translate-y-1 hover:shadow-card-hover cursor-default`}>
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
-                </div>
+                
                 <div>
                   <p className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Round 1 Pass</p>
                   <p className="font-display font-bold text-emerald-700 text-base">100% FREE</p>
@@ -187,9 +160,7 @@ export default function HeroSection({ introComplete = true }: { introComplete?: 
                 rel="noopener noreferrer"
                 className="btn-lift inline-flex items-center justify-center px-8 py-4 rounded-xl font-display font-bold text-sm sm:text-base text-white bg-gradient-to-r from-[#FF6039] to-[#FF6D4D] hover:from-[#FF6D4D] hover:to-[#EA580C] shadow-glow-coral hover:shadow-glow-coral-lg transition-all duration-200 group"
               >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                
                 <span>REGISTER FOR FREE NOW</span>
                 <svg
                   className="w-4 h-4 ml-1.5 transform group-hover:translate-x-1 transition-transform duration-200"
@@ -205,14 +176,7 @@ export default function HeroSection({ introComplete = true }: { introComplete?: 
                 href="#format"
                 className="btn-lift inline-flex items-center justify-center px-6 py-4 rounded-xl font-display font-semibold text-sm sm:text-base text-slate-700 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 shadow-sm transition-all duration-200"
               >
-                <svg className="w-4 h-4 mr-2 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                  />
-                </svg>
+                
                 <span>Explore Architecture & Schedule</span>
               </a>
             </div>
